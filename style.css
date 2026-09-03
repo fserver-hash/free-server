@@ -313,3 +313,64 @@ body {
     display: none;
   }
 }
+/* ==========================================
+   ESTILOS DE MENÚ Y DESPLEGABLE (NAVBAR)
+   ========================================== */
+
+/* Ajuste general de la navegación */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espaciado entre elementos */
+}
+
+/* Contenedor relativo para posicionar el submenú */
+.nav-item.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.arrow {
+  font-size: 10px;
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+/* Submenú desplegable flotante */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #0b0f19; /* Fondo oscuro acorde al diseño */
+  min-width: 190px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px 0;
+  z-index: 1000;
+  margin-top: 5px;
+}
+
+/* Enlaces dentro del desplegable */
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  color: #a0aec0;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+/* Efecto hover en opciones del submenú */
+.dropdown-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #00f2fe; /* Color fluorescente al pasar el mouse */
+  padding-left: 22px; /* Pequeño desplazamiento hacia la derecha */
+}
+
+/* Mostrar el submenú al pasar el cursor sobre "Computadoras" */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
