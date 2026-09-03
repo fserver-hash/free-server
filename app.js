@@ -1,5 +1,5 @@
-// Base de datos de productos estructurada por subcategorías
 const productosData = {
+  // COMPUTADORAS
   "laptops-nuevas": [
     {
       nombre: "Laptop Dell Vostro 3400",
@@ -7,83 +7,88 @@ const productosData = {
       precio: "$650.00",
       imagen: "https://via.placeholder.com/300x200?text=Laptop+Dell",
       sku: "LAP-NEW-01"
-    },
-    {
-      nombre: "Laptop HP ProBook 450 G8",
-      descripcion: "Core i7 11ª Gen, 16GB RAM, 512GB SSD, Pantalla 15.6\" FHD.",
-      precio: "$890.00",
-      imagen: "https://via.placeholder.com/300x200?text=Laptop+HP",
-      sku: "LAP-NEW-02"
     }
   ],
   "laptops-usadas": [
     {
-      nombre: "Lenovo ThinkPad T480 (Reacondicionada)",
-      descripcion: "Core i5 8ª Gen, 16GB RAM, 256GB SSD. Estado 9/10.",
+      nombre: "Lenovo ThinkPad T480",
+      descripcion: "Core i5 8ª Gen, 16GB RAM, 256GB SSD. Reacondicionada A++.",
       precio: "$380.00",
       imagen: "https://via.placeholder.com/300x200?text=ThinkPad+T480",
       sku: "LAP-USD-01"
     }
   ],
-  "pc-mesa": [
+  "pc-mesa": [],
+  "cases": [],
+  "pc-usadas": [],
+  "monitores": [],
+
+  // ALMACENAMIENTO (Subcategorías agregadas)
+  "discos-solidos": [
     {
-      nombre: "PC Ensamblada Workstation i7",
-      descripcion: "Core i7 12ª Gen, 32GB RAM, SSD NVMe 1TB, GPU RTX 3060.",
-      precio: "$1,250.00",
-      imagen: "https://via.placeholder.com/300x200?text=PC+Workstation",
-      sku: "PC-DESK-01"
+      nombre: "SSD Kingston NV2 1TB NVMe M.2",
+      descripcion: "Velocidad de lectura de hasta 3500MB/s.",
+      precio: "$82.00",
+      imagen: "https://via.placeholder.com/300x200?text=SSD+NVMe+1TB",
+      sku: "ALM-SSD-01"
     }
   ],
-  "cases": [
+  "discos-mecanicos": [
     {
-      nombre: "Case Gamer Mid-Tower RGB",
-      descripcion: "Panel de vidrio templado, incluye 4 ventiladores RGB.",
+      nombre: "Disco Duro Western Digital Blue 2TB",
+      descripcion: "3.5 pulgadas, 7200 RPM, SATA III 6Gb/s.",
       precio: "$65.00",
-      imagen: "https://via.placeholder.com/300x200?text=Case+Gamer",
-      sku: "CASE-01"
+      imagen: "https://via.placeholder.com/300x200?text=HDD+2TB",
+      sku: "ALM-HDD-01"
     }
-  ]
+  ],
+  "micro-sd": [],
+  "memorias-flash": [],
+  "discos-externos": [],
+
+  // OTRAS CATEGORÍAS
+  "memorias-ram": [],
+  "punto-de-venta": [],
+  "camaras": [],
+  "celulares": []
 };
 
-// Función para cargar los productos en la pantalla
 function cargarProductos(categoriaKey, titulo) {
   const grid = document.getElementById("grid-productos");
   const tituloElemento = document.getElementById("titulo-categoria");
-  const subtituloElemento = document.getElementById("subtitulo-categoria");
+
+  if (!grid) return;
 
   tituloElemento.textContent = titulo;
-  grid.innerHTML = ""; // Limpiar contenido previo
+  grid.innerHTML = "";
 
   const productos = productosData[categoriaKey];
 
   if (!productos || productos.length === 0) {
-    grid.innerHTML = `<p style="color:#a0aec0; grid-column: 1/-1;">Próximamente agregaremos productos a la categoría <strong>${titulo}</strong>.</p>`;
-    return;
+    grid.innerHTML = `<p style="color:#a0aec0; grid-column: 1/-1; text-align:center; font-size: 1.1rem; padding: 40px 0;">Próximamente agregaremos productos disponibles en <strong>${titulo}</strong>.</p>`;
+  } else {
+    productos.forEach(producto => {
+      const mensajeWA = encodeURIComponent(`Hola FREE SERVER, deseo información sobre el equipo: ${producto.nombre} (Ref: ${producto.sku})`);
+      const linkWA = `https://wa.me/593983278876?text=${mensajeWA}`;
+
+      const card = document.createElement("div");
+      card.className = "producto-card";
+      card.innerHTML = `
+        <div>
+          <img src="${producto.imagen}" alt="${producto.nombre}" class="producto-imagen">
+          <h3 class="producto-titulo">${producto.nombre}</h3>
+          <p class="producto-descripcion">${producto.descripcion}</p>
+        </div>
+        <div>
+          <div class="producto-precio">${producto.precio}</div>
+          <a href="${linkWA}" target="_blank" rel="noopener" class="btn-comprar-wa">
+            Cotizar por WhatsApp
+          </a>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
   }
 
-  // Generar HTML de cada producto
-  productos.forEach(producto => {
-    const mensajeWA = encodeURIComponent(`Hola FREE SERVER, deseo información o comprar el equipo: ${producto.nombre} (Ref: ${producto.sku})`);
-    const linkWA = `https://wa.me/593983278876?text=${mensajeWA}`;
-
-    const card = document.createElement("div");
-    card.className = "producto-card";
-    card.innerHTML = `
-      <div>
-        <img src="${producto.imagen}" alt="${producto.nombre}" class="producto-imagen">
-        <h3 class="producto-titulo">${producto.nombre}</h3>
-        <p class="producto-descripcion">${producto.descripcion}</p>
-      </div>
-      <div>
-        <div class="producto-precio">${producto.precio}</div>
-        <a href="${linkWA}" target="_blank" rel="noopener" class="btn-comprar-wa">
-          Cotizar por WhatsApp
-        </a>
-      </div>
-    `;
-    grid.appendChild(card);
-  });
-
-  // Desplazamiento suave hasta la sección de productos
   document.getElementById("tienda-productos").scrollIntoView({ behavior: 'smooth' });
 }
