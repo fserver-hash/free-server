@@ -74,19 +74,49 @@ function cargarProductos(categoriaKey, titulo) {
       const card = document.createElement("div");
       card.className = "producto-card";
       card.innerHTML = `
-        <div>
-          <img src="${producto.imagen}" alt="${producto.nombre}" class="producto-imagen">
-          <h3 class="producto-titulo">${producto.nombre}</h3>
-          <p class="producto-descripcion">${producto.descripcion}</p>
-        </div>
-        <div>
-          <div class="producto-precio">${producto.precio}</div>
-          <a href="${linkWA}" target="_blank" rel="noopener" class="btn-comprar-wa">
-            Cotizar por WhatsApp
-          </a>
-        </div>
-      `;
+    <div>
+      <img src="${producto.imagen}" alt="${producto.nombre}" class="producto-imagen" loading="lazy">
+      <h3 class="producto-titulo">${producto.nombre}</h3>
+      <p class="producto-descripcion">${producto.descripcion}</p>
+    </div>
+    <div>
+      <div class="producto-precio">${producto.precio}</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <button class="btn-ver-detalle" data-producto='${JSON.stringify(producto).replace(/'/g, "&#39;")}'>
+          🔍 Ver detalles
+        </button>
+        <a href="${linkWA}" target="_blank" rel="noopener" class="btn-comprar-wa" style="flex:1;">
+          💬 Cotizar
+        </a>
+      </div>
+    </div>
+  `;
+
       grid.appendChild(card);
+      
+    // Asignar eventos a los botones "Ver detalles"
+    document.querySelectorAll('.btn-ver-detalle').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const producto = JSON.parse(this.dataset.producto);
+        abrirModal(producto);
+      });
+    });
+*/
+
+// ==========================================
+// NUEVO: EVENTOS DEL MODAL (Agregar al final)
+// ==========================================
+
+// Cerrar modal con botón
+document.getElementById('modal-cerrar').addEventListener('click', cerrarModal);
+
+// Cerrar modal con overlay (clic fuera)
+document.getElementById('modal-overlay').addEventListener('click', cerrarModal);
+
+// Cerrar modal con tecla ESC
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') cerrarModal();
+});
     });
   }
 
@@ -140,4 +170,134 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+});
+// ==========================================
+// NUEVO: FUNCIONES DEL MODAL (Agregar al final)
+// ==========================================
+
+function abrirModal(producto) {
+  // Llenar los datos del modal
+  document.getElementById('modal-img').src = producto.imagen;
+  document.getElementById('modal-img').alt = producto.nombre;
+  document.getElementById('modal-nombre').textContent = producto.nombre;
+  document.getElementById('modal-sku').textContent = `Código: ${producto.sku || 'N/A'}`;
+  document.getElementById('modal-descripcion').textContent = producto.descripcion;
+  document.getElementById('modal-precio').textContent = producto.precio;
+
+  // Especificaciones
+  const listaEspec = document.getElementById('modal-especificaciones');
+  listaEspec.innerHTML = '';
+  if (producto.especificaciones && producto.especificaciones.length > 0) {
+    producto.especificaciones.forEach(esp => {
+      const li = document.createElement('li');
+      li.textContent = esp;
+      listaEspec.appendChild(li);
+    });
+  } else {
+    listaEspec.innerHTML = '<li>No hay especificaciones disponibles.</li>';
+  }
+
+  // Incluye
+  const listaIncluye = document.getElementById('modal-incluye');
+  listaIncluye.innerHTML = '';
+  if (producto.incluye && producto.incluye.length > 0) {
+    producto.incluye.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      listaIncluye.appendChild(li);
+    });
+  } else {
+    listaIncluye.innerHTML = '<li>No se especifican accesorios incluidos.</li>';
+  }
+
+  // Garantía
+  document.getElementById('modal-garantia').innerHTML = `<span>🛡️ Garantía:</span> ${producto.garantia || 'No especificada'}`;
+
+  // Stock
+  document.getElementById('modal-stock').innerHTML = `<span>📦 Stock:</span> ${producto.stock || 'Consultar disponibilidad'}`;
+
+  // WhatsApp
+  const mensajeWA = encodeURIComponent(`Hola FREE SERVER, deseo información sobre: ${producto.nombre} (Ref: ${producto.sku})`);
+  document.getElementById('modal-whatsapp').href = `https://wa.me/593983278876?text=${mensajeWA}`;
+
+  // Mostrar modal
+  document.getElementById('modal-producto').classList.add('activo');
+  document.body.style.overflow = 'hidden';
+}
+
+function cerrarModal() {
+  document.getElementById('modal-producto').classList.remove('activo');
+  document.body.style.overflow = '';
+}
+
+// ==========================================
+// MODIFICACIÓN: Actualizar cargarProductos()
+// ==========================================
+
+// ⚠️ ESTA ES LA PARTE IMPORTANTE ⚠️
+// Tienes que MODIFICAR tu función cargarProductos existente
+// Busca esta parte en tu código actual:
+
+/*
+  card.innerHTML = `
+    <div>
+      <img src="${producto.imagen}" ...>
+      <h3>${producto.nombre}</h3>
+      <p>${producto.descripcion}</p>
+    </div>
+    <div>
+      <div class="producto-precio">${producto.precio}</div>
+      <a href="${linkWA}" class="btn-comprar-wa">Cotizar</a>
+    </div>
+  `;
+*/
+
+// Y REEMPLAZA SOLO ESA PARTE por esto:
+
+/*
+  card.innerHTML = `
+    <div>
+      <img src="${producto.imagen}" alt="${producto.nombre}" class="producto-imagen" loading="lazy">
+      <h3 class="producto-titulo">${producto.nombre}</h3>
+      <p class="producto-descripcion">${producto.descripcion}</p>
+    </div>
+    <div>
+      <div class="producto-precio">${producto.precio}</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <button class="btn-ver-detalle" data-producto='${JSON.stringify(producto).replace(/'/g, "&#39;")}'>
+          🔍 Ver detalles
+        </button>
+        <a href="${linkWA}" target="_blank" rel="noopener" class="btn-comprar-wa" style="flex:1;">
+          💬 Cotizar
+        </a>
+      </div>
+    </div>
+  `;
+*/
+
+// Y después de grid.appendChild(card); agrega esto:
+
+/*
+    // Asignar eventos a los botones "Ver detalles"
+    document.querySelectorAll('.btn-ver-detalle').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const producto = JSON.parse(this.dataset.producto);
+        abrirModal(producto);
+      });
+    });
+*/
+
+// ==========================================
+// NUEVO: EVENTOS DEL MODAL (Agregar al final)
+// ==========================================
+
+// Cerrar modal con botón
+document.getElementById('modal-cerrar').addEventListener('click', cerrarModal);
+
+// Cerrar modal con overlay (clic fuera)
+document.getElementById('modal-overlay').addEventListener('click', cerrarModal);
+
+// Cerrar modal con tecla ESC
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') cerrarModal();
 });

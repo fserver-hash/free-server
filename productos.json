@@ -1,0 +1,152 @@
+{
+  "monitores": [
+    {
+      "nombre": "MONITOR QUASAD 19.5INCH QM-L195",
+      "descripcion": "Monitor LED de 19.5 pulgadas con resolución HD 1280×720.",
+      "precio": "$49.00",
+      "imagen": "https://via.placeholder.com/300x200?text=Quasad+19.5",
+      "sku": "MONQUAQM-L195BK",
+      "categoria": "Monitores",
+      "especificaciones": [
+        "Tamaño: 19.5 pulgadas",
+        "Resolución: HD 1280×720",
+        "Puertos: VGA, HDMI",
+        "Soporte VESA",
+        "Incluye cable HDMI"
+      ],
+      "garantia": "1 año",
+      "incluye": ["Cable HDMI", "Base de soporte", "Manual de usuario"],
+      "stock": 5
+    },
+    {
+      "nombre": "SMART DISPLAY AMAZON ECHO SHOW 5 3RD GEN",
+      "descripcion": "Pantalla inteligente con Alexa, sonido mejorado y diseño elegante.",
+      "precio": "$87.70",
+      "imagen": "https://via.placeholder.com/300x200?text=Echo+Show+5",
+      "sku": "MONAMZ080505848",
+      "categoria": "Monitores",
+      "especificaciones": [
+        "Pantalla: 5.5 pulgadas",
+        "Resolución: 960×480",
+        "Sonido: Bajos más profundos",
+        "Conectividad: Wi-Fi, Bluetooth",
+        "Año: 2023"
+      ],
+      "garantia": "6 meses",
+      "incluye": ["Cable de carga", "Adaptador de corriente"],
+      "stock": 8
+    },
+    {
+      "nombre": "MONITOR ASUS ZenScreen 15.6inch IPS MB169CK",
+      "descripcion": "Monitor portátil USB-C con soporte 360° y Full-HD.",
+      "precio": "$98.00",
+      "imagen": "https://via.placeholder.com/300x200?text=ZenScreen+15.6",
+      "sku": "MONASUMB169CK",
+      "categoria": "Monitores",
+      "especificaciones": [
+        "Tamaño: 15.6 pulgadas",
+        "Resolución: Full-HD 1920×1080",
+        "Pantalla: IPS",
+        "Puertos: HDMI, 2x USB-C",
+        "Soporte 360°"
+      ],
+      "garantia": "1 año",
+      "incluye": ["Cable USB-C", "Funda protectora", "Soporte plegable"],
+      "stock": 10
+    },
+    {
+      "nombre": "MONITOR Dell Pro 20 E2026H",
+      "descripcion": "Monitor empresarial de 19.5 pulgadas con resolución 1600×900.",
+      "precio": "$105.00",
+      "imagen": "https://via.placeholder.com/300x200?text=Dell+Pro+20",
+      "sku": "MONDELED2026H",
+      "categoria": "Monitores",
+      "especificaciones": [
+        "Tamaño: 19.5 pulgadas",
+        "Resolución: 1600×900",
+        "Panel: TN",
+        "Puertos: HDMI, DP, VGA",
+        "Garantía: 3 años"
+      ],
+      "garantia": "3 años",
+      "incluye": ["Cable HDMI", "Base de escritorio"],
+      "stock": 7
+    },
+    {
+      "nombre": "MONITOR GIGABYTE GS24F14",
+      "descripcion": "Monitor Gaming de 23.8 pulgadas FHD 144Hz para gamers exigentes.",
+      "precio": "$158.00",
+      "imagen": "https://via.placeholder.com/300x200?text=Gigabyte+GS24F14",
+      "sku": "MONIGBGS24F14",
+      "categoria": "Monitores",
+      "especificaciones": [
+        "Tamaño: 23.8 pulgadas",
+        "Resolución: FHD 1920×1080",
+        "Panel: IPS",
+        "Frecuencia: 144Hz",
+        "Puertos: HDMI, DP",
+        "Anti-reflejos"
+      ],
+      "garantia": "2 años",
+      "incluye": ["Cable HDMI", "Cable DisplayPort", "Base ajustable"],
+      "stock": 4
+    },
+    {
+      "nombre": "MONITOR GIGABYTE GS25F2",
+      "descripcion": "Monitor Gaming de 24.5 pulgadas con panel SS-IPS y 200Hz.",
+      "precio": "$180.00",
+      "imagen": "https://via.placeholder.com/300x200?text=Gigabyte+GS25F2",
+      "sku": "MONIGBGS25F2",
+      "categoria": "Monitores",
+      "especificaciones": [
+        "Tamaño: 24.5 pulgadas",
+        "Resolución: FHD 1920×1080",
+        "Panel: SS-IPS",
+        "Frecuencia: 200Hz",
+        "Puertos: 2x HDMI, 1x DP",
+        "Anti-reflejos"
+      ],
+      "garantia": "2 años",
+      "incluye": ["Cable HDMI", "Cable DisplayPort", "Base ajustable"],
+      "stock": 3
+    },
+    {
+      "nombre": "MONITOR ASUS VY279HGR",
+      "descripcion": "Monitor de 27 pulgadas FHD con 120Hz y tecnología Eye Care Plus.",
+      "precio": "$192.00",
+      "imagen": "https://via.placeholder.com/300x200?text=Asus+VY279HGR",
+      "sku": "MONASUVY279HGR",
+      "categoria": "Monitores",
+      "especificaciones": [
+        "Tamaño: 27 pulgadas",
+        "Resolución: FHD 1920×1080",
+        "Panel: IPS",
+        "Frecuencia: 120Hz",
+        "Tiempo respuesta: 1ms",
+        "Puertos: VGA, HDMI",
+        "Eye Care Plus"
+      ],
+      "garantia": "3 años",
+      "incluye": ["Cable HDMI", "Base de escritorio", "Manual"],
+      "stock": 6
+    },
+    {
+      "nombre": "MONITOR HP P22v G5",
+      "descripcion": "Monitor empresarial de 21.5 pulgadas FHD con diseño elegante.",
+      "precio": "$196.00",
+      "imagen": "https://via.placeholder.com/300x200?text=HP+P22v+G5",
+      "sku": "MONHPX64V81AA",
+      "categoria": "Monitores",
+      "especificaciones": [
+        "Tamaño: 21.5 pulgadas",
+        "Resolución: FHD 1920×1080",
+        "Puertos: HDMI, VGA",
+        "Diseño delgado",
+        "Color: Negro"
+      ],
+      "garantia": "1 año",
+      "incluye": ["Cable HDMI", "Base de escritorio"],
+      "stock": 9
+    }
+  ]
+}
