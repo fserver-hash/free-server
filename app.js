@@ -92,3 +92,52 @@ function cargarProductos(categoriaKey, titulo) {
 
   document.getElementById("tienda-productos").scrollIntoView({ behavior: 'smooth' });
 }
+// ==========================================
+// MENÚ HAMBURGUESA PARA MÓVIL
+// ==========================================
+
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  const overlay = document.getElementById('overlay-menu');
+
+  function toggleMenu() {
+    menuToggle.classList.toggle('active');
+    navMenu.classList.toggle('abierto');
+    overlay.classList.toggle('visible');
+    document.body.style.overflow = navMenu.classList.contains('abierto') ? 'hidden' : '';
+  }
+
+  function cerrarMenu() {
+    menuToggle.classList.remove('active');
+    navMenu.classList.remove('abierto');
+    overlay.classList.remove('visible');
+    document.body.style.overflow = '';
+  }
+
+  menuToggle.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', cerrarMenu);
+
+  // Cerrar menú al hacer clic en un enlace
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Si es un enlace que carga productos, esperar un poco
+      if (this.getAttribute('onclick')) {
+        setTimeout(cerrarMenu, 300);
+      } else {
+        cerrarMenu();
+      }
+    });
+  });
+
+  // Manejar los desplegables en móvil (Computadoras y Almacenamiento)
+  document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+      const menu = this.nextElementSibling;
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        menu.classList.toggle('abierto');
+      }
+    });
+  });
+});
