@@ -19,26 +19,6 @@
       ],
       "garantia": "1 año",
       "stock": "Disponible"
-    },
-    {
-      "nombre": "MONITOR ASUS ZenScreen 15.6inch IPS MB169CK",
-      "descripcion": "Monitor portátil USB-C con soporte 360° y resolución Full-HD.",
-      "precio": "$140.00",
-      "imagen": "img/productos/asus-zenscreen-156.jpg",
-      "sku": "MONASUMB169CK",
-      "especificaciones": [
-        "Tamaño: 15.6 pulgadas",
-        "Resolución: Full-HD 1920×1080",
-        "Panel: IPS antirreflejo",
-        "Conectividad: USB-C, Mini HDMI"
-      ],
-      "incluye": [
-        "Cable USB-C",
-        "Funda protectora inteligente",
-        "Guía de inicio rápido"
-      ],
-      "garantia": "1 año",
-      "stock": "Disponible"
     }
   ],
   "laptops-nuevas": [
@@ -62,47 +42,6 @@
       "stock": "Disponible"
     }
   ],
-  "laptops-usadas": [
-    {
-      "nombre": "Lenovo ThinkPad T480",
-      "descripcion": "Laptop empresarial ultrarresistente reacondicionada en excelente estado (Grado A++).",
-      "precio": "$380.00",
-      "imagen": "img/productos/thinkpad-t480.jpg",
-      "sku": "LAP-USD-T480",
-      "especificaciones": [
-        "Procesador: Intel Core i5 8ª Gen",
-        "Memoria RAM: 16GB DDR4",
-        "Almacenamiento: 256GB SSD",
-        "Pantalla: 14\" HD / FHD"
-      ],
-      "incluye": [
-        "Cargador original Tipo-C",
-        "Batería funcional probada"
-      ],
-      "garantia": "6 meses",
-      "stock": "Pocas unidades"
-    }
-  ],
-  "discos-solidos": [
-    {
-      "nombre": "SSD Kingston NV2 1TB NVMe M.2",
-      "descripcion": "Unidad de estado sólido de alta velocidad para repotenciar PC o Laptop.",
-      "precio": "$200.00",
-      "imagen": "img/productos/ssd-kingston-1tb.jpg",
-      "sku": "ALM-SSD-1TB-NV2",
-      "especificaciones": [
-        "Capacidad: 1TB (1000GB)",
-        "Factor de forma: M.2 2280",
-        "Interfaz: PCIe 4.0 x4 NVMe",
-        "Velocidad de lectura: Hasta 3500 MB/s"
-      ],
-      "incluye": [
-        "Empaque sellado de fábrica"
-      ],
-      "garantia": "1 año",
-      "stock": "Disponible"
-    }
-  ],
   "cctv": [
     {
       "nombre": "Cámara Wi-Fi Exterior EZVIZ H6C 3k",
@@ -111,7 +50,7 @@
       "imagen": "img/productos/ezviz-h3c.jpg",
       "sku": "CCT-EZV-H6C",
       "especificaciones": [
-        "Resolución: 3k ",
+        "Resolución: 3k",
         "Protección: IP68 (Resistente al agua/intemperie)",
         "Visión Nocturna: Color / Infrarroja",
         "Soporta Memoria de: Memoria / 512 Gb",

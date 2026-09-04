@@ -10,213 +10,139 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-
-
 <body>
   <!-- PANEL DESPLEGABLE -->
-<div id="modal-overlay" class="modal-overlay"></div>
+  <div id="modal-overlay" class="modal-overlay"></div>
 
-<div id="modal-producto" class="modal-producto">
-  <button id="modal-cerrar" class="modal-cerrar" aria-label="Cerrar modal">&times;</button>
-  <div class="modal-contenido">
-    <div class="modal-col-img">
-      <img id="modal-img" src="" alt="Imagen del producto">
-    </div>
-    <div class="modal-col-info">
-      <span id="modal-sku" class="modal-sku"></span>
-      <h2 id="modal-nombre" class="modal-nombre"></h2>
-      <p id="modal-descripcion" class="modal-descripcion"></p>
-      
-      <div class="modal-seccion">
-        <h4>Especificaciones principales</h4>
-        <ul id="modal-especificaciones" class="modal-lista"></ul>
+  <div id="modal-producto" class="modal-producto">
+    <button id="modal-cerrar" class="modal-cerrar" aria-label="Cerrar modal">&times;</button>
+    <div class="modal-contenido">
+      <div class="modal-col-img">
+        <img id="modal-img" src="" alt="Imagen del producto">
       </div>
+      <div class="modal-col-info">
+        <span id="modal-sku" class="modal-sku"></span>
+        <h2 id="modal-nombre" class="modal-nombre"></h2>
+        <p id="modal-descripcion" class="modal-descripcion"></p>
+        
+        <div class="modal-seccion">
+          <h4>Especificaciones principales</h4>
+          <ul id="modal-especificaciones" class="modal-lista"></ul>
+        </div>
 
-      <div class="modal-seccion">
-        <h4>Incluye</h4>
-        <ul id="modal-incluye" class="modal-lista"></ul>
-      </div>
+        <div class="modal-seccion">
+          <h4>Incluye</h4>
+          <ul id="modal-incluye" class="modal-lista"></ul>
+        </div>
 
-      <div class="modal-meta">
-        <div id="modal-garantia"></div>
-        <div id="modal-stock"></div>
-      </div>
+        <div class="modal-meta">
+          <div id="modal-garantia"></div>
+          <div id="modal-stock"></div>
+        </div>
 
-      <div class="modal-footer">
-        <span id="modal-precio" class="modal-precio"></span>
-        <a id="modal-whatsapp" href="#" target="_blank" rel="noopener" class="btn-whatsapp">
-          💬 Cotizar por WhatsApp
-        </a>
+        <div class="modal-footer">
+          <span id="modal-precio" class="modal-precio"></span>
+          <a id="modal-whatsapp" href="#" target="_blank" rel="noopener" class="btn-whatsapp">
+            💬 Cotizar por WhatsApp
+          </a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
   <header class="header">
     <div class="container navbar">
       <a href="#" class="logo">FREE <span>SERVER</span></a>
       
-      <!-- NUEVO BOTÓN HAMBURGUESA -->
       <button class="menu-hamburguesa" id="menu-toggle" aria-label="Abrir menú">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       
       <nav class="nav-links">
-  <a href="#inicio">Inicio</a>
+        <a href="#inicio">Inicio</a>
 
-  <!-- ORDENADORES -->
-  <div class="nav-item dropdown">
-    <a href="#tienda-productos" class="dropdown-toggle">ORDENADORES <span class="arrow">▾</span></a>
-    <div class="dropdown-menu">
-      <a href="#tienda-productos" onclick="cargarProductos('laptops-nuevas', 'Laptops Nuevas')">Laptops Nuevas</a>
-      <a href="#tienda-productos" onclick="cargarProductos('laptops-usadas', 'Laptops Usadas')">Laptops Usadas</a>
-      <a href="#tienda-productos" onclick="cargarProductos('pc-nuevas', 'PC Nuevas')">PC Nuevas</a>
-      <a href="#tienda-productos" onclick="cargarProductos('pc-usadas', 'PC Usadas')">PC Usadas</a>
-      <a href="#tienda-productos" onclick="cargarProductos('cases', 'Cases')">Cases</a>
-      <a href="#tienda-productos" onclick="cargarProductos('monitores', 'Monitores')">Monitores</a>
+        <!-- ORDENADORES -->
+        <div class="nav-item dropdown">
+          <a href="#tienda-productos" class="dropdown-toggle">ORDENADORES <span class="arrow">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="#tienda-productos" onclick="cargarProductos('laptops-nuevas', 'Laptops Nuevas')">Laptops Nuevas</a>
+            <a href="#tienda-productos" onclick="cargarProductos('laptops-usadas', 'Laptops Usadas')">Laptops Usadas</a>
+            <a href="#tienda-productos" onclick="cargarProductos('pc-nuevas', 'PC Nuevas')">PC Nuevas</a>
+            <a href="#tienda-productos" onclick="cargarProductos('pc-usadas', 'PC Usadas')">PC Usadas</a>
+            <a href="#tienda-productos" onclick="cargarProductos('cases', 'Cases')">Cases</a>
+            <a href="#tienda-productos" onclick="cargarProductos('monitores', 'Monitores')">Monitores</a>
+          </div>
+        </div>
+
+        <!-- ALMACENAMIENTO -->
+        <div class="nav-item dropdown">
+          <a href="#tienda-productos" class="dropdown-toggle">ALMACENAMIENTO <span class="arrow">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="#tienda-productos" onclick="cargarProductos('discos-solidos', 'Discos Sólidos')">Discos Sólidos</a>
+            <a href="#tienda-productos" onclick="cargarProductos('discos-mecanicos', 'Discos Mecánicos')">Discos Mecánicos</a>
+            <a href="#tienda-productos" onclick="cargarProductos('micro-sd', 'Memorias Micro SD')">Memorias Micro SD</a>
+            <a href="#tienda-productos" onclick="cargarProductos('memorias-flash', 'Memorias Flash')">Memorias Flash</a>
+            <a href="#tienda-productos" onclick="cargarProductos('discos-externos', 'Discos Externos')">Discos Externos</a>
+          </div>
+        </div>
+
+        <!-- MEMORIAS RAM -->
+        <div class="nav-item dropdown">
+          <a href="#tienda-productos" class="dropdown-toggle">MEMORIAS RAM <span class="arrow">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="#tienda-productos" onclick="cargarProductos('ram-ddr2', 'Memorias RAM DDR2')">DDR2</a>
+            <a href="#tienda-productos" onclick="cargarProductos('ram-ddr3', 'Memorias RAM DDR3')">DDR3</a>
+            <a href="#tienda-productos" onclick="cargarProductos('ram-ddr4', 'Memorias RAM DDR4')">DDR4</a>
+            <a href="#tienda-productos" onclick="cargarProductos('ram-ddr5', 'Memorias RAM DDR5')">DDR5</a>
+          </div>
+        </div>
+
+        <!-- IMPRESIÓN -->
+        <div class="nav-item dropdown">
+          <a href="#tienda-productos" class="dropdown-toggle">IMPRESIÓN <span class="arrow">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="#tienda-productos" onclick="cargarProductos('impresoras-tinta-continua', 'Impresoras Tinta Continua')">Impresoras Tinta Continua</a>
+            <a href="#tienda-productos" onclick="cargarProductos('impresoras-tinta-adaptadas', 'Impresoras Tinta Continua Adaptadas')">Impresoras Tinta Continua Adaptadas</a>
+            <a href="#tienda-productos" onclick="cargarProductos('impresoras-termicas', 'Impresoras Térmicas')">Impresoras Térmicas</a>
+            <a href="#tienda-productos" onclick="cargarProductos('tintas', 'Tintas')">Tintas</a>
+            <a href="#tienda-productos" onclick="cargarProductos('papel', 'Papel')">Papel</a>
+          </div>
+        </div>
+
+        <!-- SEGURIDAD -->
+        <div class="nav-item dropdown">
+          <a href="#tienda-productos" class="dropdown-toggle">SEGURIDAD <span class="arrow">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="#tienda-productos" onclick="cargarProductos('cctv', 'Cámaras y Seguridad CCTV')">Cámaras CCTV</a>
+            <a href="#tienda-productos" onclick="cargarProductos('camaras-analogas', 'Cámaras Análogas')">Cámaras Análogas</a>
+            <a href="#tienda-productos" onclick="cargarProductos('dvr', 'DVR')">DVR</a>
+            <a href="#tienda-productos" onclick="cargarProductos('camaras-ip', 'Cámaras IP')">Cámaras IP</a>
+            <a href="#tienda-productos" onclick="cargarProductos('nvr', 'NVR')">NVR</a>
+          </div>
+        </div>
+
+        <!-- ENLACES DIRECTOS GENERALES -->
+        <a href="#tienda-productos" onclick="cargarProductos('cctv', 'Cámaras de Seguridad')">Cámaras</a>
+        <a href="#tienda-productos" onclick="cargarProductos('laptops-nuevas', 'Laptops')">Laptops</a>
+
+        <a href="https://wa.me/593983278876?text=Hola,%20deseo%20cotizar%20equipos%20y%20servicios." target="_blank" rel="noopener" class="btn-primary">Cotizar</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <!-- ALMACENAMIENTO -->
-  <div class="nav-item dropdown">
-    <a href="#tienda-productos" class="dropdown-toggle">ALMACENAMIENTO <span class="arrow">▾</span></a>
-    <div class="dropdown-menu">
-      <a href="#tienda-productos" onclick="cargarProductos('discos-solidos', 'Discos Sólidos')">Discos Sólidos</a>
-      <a href="#tienda-productos" onclick="cargarProductos('discos-mecanicos', 'Discos Mecánicos')">Discos Mecánicos</a>
-      <a href="#tienda-productos" onclick="cargarProductos('micro-sd', 'Memorias Micro SD')">Memorias Micro SD</a>
-      <a href="#tienda-productos" onclick="cargarProductos('memorias-flash', 'Memorias Flash')">Memorias Flash</a>
-      <a href="#tienda-productos" onclick="cargarProductos('discos-externos', 'Discos Externos')">Discos Externos</a>
-    </div>
-  </div>
-
-  <!-- MEMORIAS RAM -->
-  <div class="nav-item dropdown">
-    <a href="#tienda-productos" class="dropdown-toggle">MEMORIAS RAM <span class="arrow">▾</span></a>
-    <div class="dropdown-menu">
-      <a href="#tienda-productos" onclick="cargarProductos('ram-ddr2', 'Memorias RAM DDR2')">DDR2</a>
-      <a href="#tienda-productos" onclick="cargarProductos('ram-ddr3', 'Memorias RAM DDR3')">DDR3</a>
-      <a href="#tienda-productos" onclick="cargarProductos('ram-ddr4', 'Memorias RAM DDR4')">DDR4</a>
-      <a href="#tienda-productos" onclick="cargarProductos('ram-ddr5', 'Memorias RAM DDR5')">DDR5</a>
-    </div>
-  </div>
-
-  <!-- IMPRESIÓN -->
-  <div class="nav-item dropdown">
-    <a href="#tienda-productos" class="dropdown-toggle">IMPRESIÓN <span class="arrow">▾</span></a>
-    <div class="dropdown-menu">
-      <a href="#tienda-productos" onclick="cargarProductos('impresoras-tinta-continua', 'Impresoras Tinta Continua')">Impresoras Tinta Continua</a>
-      <a href="#tienda-productos" onclick="cargarProductos('impresoras-tinta-adaptadas', 'Impresoras Tinta Continua Adaptadas')">Impresoras Tinta Continua Adaptadas</a>
-      <a href="#tienda-productos" onclick="cargarProductos('impresoras-termicas', 'Impresoras Térmicas')">Impresoras Térmicas</a>
-      <a href="#tienda-productos" onclick="cargarProductos('tintas', 'Tintas')">Tintas</a>
-      <a href="#tienda-productos" onclick="cargarProductos('papel', 'Papel')">Papel</a>
-    </div>
-  </div>
-
-  <!-- PUNTO DE VENTA -->
-  <div class="nav-item dropdown">
-    <a href="#tienda-productos" class="dropdown-toggle">PUNTO DE VENTA <span class="arrow">▾</span></a>
-    <div class="dropdown-menu">
-      <a href="#tienda-productos" onclick="cargarProductos('pc-aio', 'PC AIO')">PC AIO</a>
-      <a href="#tienda-productos" onclick="cargarProductos('lectores-codigo', 'Lectores de Código')">Lectores</a>
-      <a href="#tienda-productos" onclick="cargarProductos('impresoras-pos', 'Impresoras POS')">Impresoras POS</a>
-      <a href="#tienda-productos" onclick="cargarProductos('cajas-dinero', 'Cajas de Dinero')">Cajas de Dinero</a>
-      <a href="#tienda-productos" onclick="cargarProductos('papel-termico', 'Papel Térmico')">Papel Térmico</a>
-    </div>
-  </div>
-
-  <!-- SEGURIDAD -->
-  <div class="nav-item dropdown">
-    <a href="#tienda-productos" class="dropdown-toggle">SEGURIDAD <span class="arrow">▾</span></a>
-    <div class="dropdown-menu">
-      <a href="#tienda-productos" onclick="cargarProductos('camaras-analogas', 'Cámaras Análogas')">Cámaras Análogas</a>
-      <a href="#tienda-productos" onclick="cargarProductos('dvr', 'DVR')">DVR</a>
-      <a href="#tienda-productos" onclick="cargarProductos('camaras-ip', 'Cámaras IP')">Cámaras IP</a>
-      <a href="#tienda-productos" onclick="cargarProductos('nvr', 'NVR')">NVR</a>
-      <a href="#tienda-productos" onclick="cargarProductos('camaras-roboticas', 'Cámaras Robóticas')">Robóticas</a>
-      <a href="#tienda-productos" onclick="cargarProductos('adaptadores-corriente', 'Adaptadores de Corriente')">Adaptadores de Corriente</a>
-      <a href="#tienda-productos" onclick="cargarProductos('switches-poe', 'Switches PoE')">Switch PoE</a>
-      <a href="#tienda-productos" onclick="cargarProductos('sirenas', 'Sirenas')">Sirenas</a>
-      <a href="#tienda-productos" onclick="cargarProductos('alarmas', 'Alarmas')">Alarmas</a>
-    </div>
-  </div>
-
-  <!-- REDES -->
-  <div class="nav-item dropdown">
-    <a href="#tienda-productos" class="dropdown-toggle">REDES <span class="arrow">▾</span></a>
-    <div class="dropdown-menu">
-      <a href="#tienda-productos" onclick="cargarProductos('routers', 'Routers')">Routers</a>
-      <a href="#tienda-productos" onclick="cargarProductos('switches', 'Switches')">Switches</a>
-      <a href="#tienda-productos" onclick="cargarProductos('cables-red', 'Cables de Red')">Cables</a>
-      <a href="#tienda-productos" onclick="cargarProductos('conectores-red', 'Conectores')">Conectores</a>
-      <a href="#tienda-productos" onclick="cargarProductos('probadores-red', 'Probadores')">Probadores</a>
-      <a href="#tienda-productos" onclick="cargarProductos('ponchadoras', 'Ponchadoras')">Ponchadoras</a>
-      <a href="#tienda-productos" onclick="cargarProductos('fibra-optica', 'Fibra Óptica')">Fibra</a>
-      <a href="#tienda-productos" onclick="cargarProductos('racks', 'Racks')">Racks</a>
-    </div>
-  </div>
-
-  <!-- MÓVILES -->
-  <div class="nav-item dropdown">
-    <a href="#tienda-productos" class="dropdown-toggle">MÓVILES <span class="arrow">▾</span></a>
-    <div class="dropdown-menu">
-      <a href="#tienda-productos" onclick="cargarProductos('celulares-android', 'Celulares Android')">Celulares Android</a>
-      <a href="#tienda-productos" onclick="cargarProductos('iphones', 'iPhones')">iPhone</a>
-      <a href="#tienda-productos" onclick="cargarProductos('tablets-android', 'Tablets Android')">Tablets Android</a>
-      <a href="#tienda-productos" onclick="cargarProductos('ipads', 'iPads')">iPads</a>
-    </div>
-  </div>
-
-  <!-- DOMÓTICA -->
-  <div class="nav-item dropdown">
-    <a href="#tienda-productos" class="dropdown-toggle">DOMÓTICA <span class="arrow">▾</span></a>
-    <div class="dropdown-menu">
-      <a href="#tienda-productos" onclick="cargarProductos('alexa', 'Alexas')">Alexas</a>
-      <a href="#tienda-productos" onclick="cargarProductos('enchufes-inteligentes', 'Enchufes Inteligentes')">Enchufes</a>
-      <a href="#tienda-productos" onclick="cargarProductos('interruptores-inteligentes', 'Interruptores Inteligentes')">Interruptores</a>
-      <a href="#tienda-productos" onclick="cargarProductos('focos-inteligentes', 'Focos Inteligentes')">Focos</a>
-      <a href="#tienda-productos" onclick="cargarProductos('iluminacion-domotica', 'Iluminación')">Iluminación</a>
-      <a href="#tienda-productos" onclick="cargarProductos('alarmas-domotica', 'Alarmas Inteligentes')">Alarmas</a>
-      <a href="#tienda-productos" onclick="cargarProductos('cortinas-inteligentes', 'Cortinas Inteligentes')">Cortinas</a>
-    </div>
-  </div>
-
-  <!-- PERIFÉRICOS -->
-<div class="nav-item dropdown">
-  <a href="#tienda-productos" class="dropdown-toggle">PERIFÉRICOS <span class="arrow">▾</span></a>
-  <div class="dropdown-menu">
-    <a href="#tienda-productos" onclick="cargarProductos('mouse', 'Mouse')">Mouse</a>
-    <a href="#tienda-productos" onclick="cargarProductos('teclados', 'Teclados')">Teclados</a>
-    <a href="#tienda-productos" onclick="cargarProductos('auriculares', 'Auriculares')">Auriculares</a>
-    <a href="#tienda-productos" onclick="cargarProductos('combos-perifericos', 'Combos Teclado y Mouse')">Combos</a>
-    <a href="#tienda-productos" onclick="cargarProductos('perifericos-wireless', 'Inalámbricos')">Wireless</a>
-    <a href="#tienda-productos" onclick="cargarProductos('antenas-usb', 'Antenas USB WiFi')">Antenas USB</a>
-    <a href="#tienda-productos" onclick="cargarProductos('hubs-usb', 'Hubs USB')">Hubs</a>
-  </div>
-</div>
-
-  <!-- ENLACES DIRECTOS GENERALES -->
-  <a href="#tienda-productos" onclick="cargarProductos('memorias-ram', 'Memorias RAM')">Memorias RAM</a>
-  <a href="#tienda-productos" onclick="cargarProductos('punto-de-venta', 'Punto de Venta')">Punto de Venta</a>
-  <a href="#tienda-productos" onclick="cargarProductos('camaras', 'Cámaras de Seguridad')">Cámaras</a>
-  <a href="#tienda-productos" onclick="cargarProductos('celulares', 'Celulares')">Celulares</a>
-
-  <a href="https://wa.me/593983278876?text=Hola,%20deseo%20cotizar%20equipos%20y%20servicios." target="_blank" rel="noopener" class="btn-primary">Cotizar</a>
-</nav>
-
-  <!-- Overlay para cerrar menú al hacer clic fuera -->
-<div class="overlay-menu" id="overlay-menu"></div>
+  <div class="overlay-menu" id="overlay-menu"></div>
 
   <section id="inicio" class="hero">
     <div class="hero-bg-glow"></div>
     <div class="container hero-content">
       <span class="badge">Infraestructura y Tecnología High-End</span>
       <h1>Potenciamos tu Negocio y Empresa con <span>Tecnología de Vanguardia</span></h1>
-      El aliado que garantiza que tu empresa no se detenga <br>
-      Computadoras de alto rendimiento<br>
-      Soluciones avanzadas de impresión <br> 
-      Sistemas integrales de seguridad electrónica<br>
+      <p>
+        El aliado que garantiza que tu empresa no se detenga.<br>
+        Computadoras de alto rendimiento | Soluciones avanzadas de impresión | Sistemas integrales de seguridad electrónica
+      </p>
 
       <div class="hero-buttons">
         <a href="https://wa.me/593983278876?text=Hola,%20deseo%20cotizar%20equipos%20y%20servicios." target="_blank" rel="noopener" class="btn-whatsapp">
@@ -224,8 +150,8 @@
           Contactar
         </a>
         
-        <a href="https://wa.me/c/593983278876" target="_blank" rel="noopener" class="btn-secondary">
-          Catálogo
+        <a href="#tienda-productos" class="btn-secondary">
+          Ver Catálogo
         </a>
       </div>
     </div>
@@ -237,60 +163,15 @@
       <p id="subtitulo-categoria">Selecciona una categoría en el menú superior para explorar las opciones disponibles.</p>
     </div>
 
-    <div id="grid-productos" class="grid-cards">
-      </div>
-  </section>
-
-  <section id="categorias" class="services">
-    <div class="container">
-      <div class="section-header">
-        <h2>Nuestras Soluciones</h2>
-        <p>Equipamiento tecnológico integral para empresas, profesionales y hogares.</p>
-      </div>
-
-      <div class="grid-cards">
-        <div class="card">
-          <div class="card-icon">💻</div>
-          <h3>Computadoras y Laptops</h3>
-          <p>Equipos de alto rendimiento, laptops corporativas, PCs ensambladas a medida, servidores y accesorios informáticos.</p>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">🖨️</div>
-          <h3>Sistemas de Impresión</h3>
-          <p>Impresoras de tanque continuo, impresoras láser, plotters, suministros originales y mantenimiento especializado.</p>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">🛡️</div>
-          <h3>Seguridad Electrónica</h3>
-          <p>Cámaras CCTV e IP, sistemas de videovigilancia de alta definición, control de acceso y alarmas inteligentes.</p>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">🌐</div>
-          <h3>Redes y Conectividad</h3>
-          <p>Cableado estructurado, fibra óptica, routers corporativos, switches y soluciones de red para máxima velocidad.</p>
-        </div>
-      </div>
-    </div>
+    <div id="grid-productos" class="grid-cards"></div>
   </section>
 
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-logo">FREE <span>SERVER</span></div>
-      
       <blockquote class="motivational-quote">
         "La tecnología no solo conecta dispositivos, conecta sueños con oportunidades. Servir con excelencia es nuestro compromiso."
       </blockquote>
-
-      <div class="whatsapp-wrapper">
-        <a href="https://wa.me/593983278876?text=Hola,%20deseo%20más%20información." target="_blank" rel="noopener" class="btn-whatsapp-footer">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 5.001L2 22l5.122-1.331c1.464.798 3.111 1.218 4.887 1.219h.005c5.507 0 9.991-4.479 9.991-9.986 0-2.667-1.038-5.175-2.925-7.062A9.927 9.927 0 0 0 12.012 2zm5.836 14.28c-.244.688-1.42 1.313-1.974 1.393-.526.076-1.205.109-3.486-.832-2.919-1.203-4.801-4.175-4.946-4.37-.145-.195-1.185-1.579-1.185-3.011 0-1.433.748-2.138 1.013-2.428.265-.29.578-.363.771-.363.193 0 .386.002.554.01.18.009.422-.068.662.508.244.585.83 2.028.903 2.175.073.146.121.318.024.512-.097.195-.145.317-.29.488-.145.172-.305.385-.436.518-.145.146-.296.305-.127.597.169.292.753 1.242 1.616 2.013 1.11.99 2.045 1.296 2.337 1.442.292.146.463.122.633-.073.171-.195.733-.853.928-1.146.195-.292.39-.244.657-.146.267.098 1.69.797 1.983.943.292.146.487.219.56.341.073.122.073.707-.171 1.395z"/></svg>
-          Chatea con nosotros (+593 98 327 8876)
-        </a>
-      </div>
-
       <p class="copyright">&copy; 2026 FREE SERVER. Todos los derechos reservados.</p>
     </div>
   </footer>

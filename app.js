@@ -1,6 +1,5 @@
 let productosData = {};
 
-// Cargar catálogo desde productos.json al iniciar
 document.addEventListener('DOMContentLoaded', () => {
   fetch('productos.json')
     .then(response => {
@@ -8,13 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
       return response.json();
     })
     .then(data => {
-    productosData = data;
-    console.log("Catálogo FREE SERVER cargado correctamente.");
-    cargarProductos('cctv', 'Cámaras y Seguridad CCTV');
-  })
-  .catch(error => console.error("Error en la carga del catálogo:", error));
-  
-  // Configuración de eventos del modal y menú
+      productosData = data;
+      console.log("Catálogo FREE SERVER cargado correctamente.");
+      cargarProductos('cctv', 'Cámaras y Seguridad CCTV');
+    })
+    .catch(error => console.error("Error en la carga del catálogo:", error));
+    
   inicializarEventos();
 });
 
@@ -24,7 +22,7 @@ function cargarProductos(categoriaKey, titulo) {
 
   if (!grid) return;
 
-  tituloElemento.textContent = titulo;
+  if (tituloElemento) tituloElemento.textContent = titulo;
   grid.innerHTML = "";
 
   const productos = productosData[categoriaKey];
@@ -40,7 +38,7 @@ function cargarProductos(categoriaKey, titulo) {
       card.className = "producto-card";
       card.innerHTML = `
         <div>
-          <img src="${producto.imagen || 'img/productos/placeholder.jpg'}" alt="${producto.nombre}" class="producto-imagen" loading="lazy">
+          <img src="${producto.imagen || ''}" alt="${producto.nombre}" class="producto-imagen" loading="lazy" onerror="this.style.display='none'">
           <h3 class="producto-titulo">${producto.nombre}</h3>
           <p class="producto-descripcion">${producto.descripcion}</p>
         </div>
@@ -68,15 +66,19 @@ function cargarProductos(categoriaKey, titulo) {
     });
   }
 
-  document.getElementById("tienda-productos").scrollIntoView({ behavior: 'smooth' });
+  const secProductos = document.getElementById("tienda-productos");
+  if (secProductos) {
+    secProductos.scrollIntoView({ behavior: 'smooth' });
+  }
 }
 
-// ==========================================
-// FUNCIONES DEL MODAL
-// ==========================================
 function abrirModal(producto) {
-  document.getElementById('modal-img').src = producto.imagen || 'img/productos/placeholder.jpg';
-  document.getElementById('modal-img').alt = producto.nombre;
+  const imgModal = document.getElementById('modal-img');
+  if (imgModal) {
+    imgModal.src = producto.imagen || '';
+    imgModal.alt = producto.nombre;
+  }
+  
   document.getElementById('modal-nombre').textContent = producto.nombre;
   document.getElementById('modal-sku').textContent = `Código: ${producto.sku || 'N/A'}`;
   document.getElementById('modal-descripcion').textContent = producto.descripcion;
@@ -134,7 +136,6 @@ function inicializarEventos() {
     if (e.key === 'Escape') cerrarModal();
   });
 
-  // Menú móvil
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.querySelector('.nav-links');
   const overlayMenu = document.getElementById('overlay-menu');
