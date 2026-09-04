@@ -64,9 +64,15 @@
       "garantia": "1 año",
       "stock": "Disponible"
     }
-  ]
-},
-"routers": [],
+  ],
+  "alarmas": [],
+  "camaras-analogas": [],
+  "dvr": [],
+  "camaras-ip": [],
+  "nvr": [],
+  "switch-poe": [],
+  "fuentes": [],
+  "routers": [],
   "switches": [],
   "repetidores": [],
   "antenas-wifi": [],
@@ -77,17 +83,16 @@
     {
       "nombre": "Rollos o Accesorios de Fibra Óptica",
       "descripcion": "Fibra Drop 2 Hilos Soluciones de alta velocidad para infraestructura de red.",
-      "precio": "280",
-      "imagen": "",
+      "precio": "$280.00",
+      "imagen": "img/productos/fibra-optica.jpg",
       "sku": "NET-FO-01",
       "especificaciones": ["Alta velocidad", "Baja atenuación"],
       "incluye": ["Bobina/Accesorio según modelo"],
       "garantia": "1 año",
       "stock": "Disponible"
-      ],
+    }
+  ],
   "racks": [],
-    },
-  
   "celulares-android": [],
   "iphones": [],
   "tablets-android": [],
@@ -114,3 +119,4 @@
     }
   ],
   "cables-movil": []
+}
