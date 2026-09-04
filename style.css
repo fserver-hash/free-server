@@ -470,54 +470,78 @@ body {
 .dropdown-toggle {
   white-space: nowrap !important;
 }
+
 /* ==========================================
-   ADAPTACIÓN PARA PANTALLAS MÓVILES
+   MENÚ MÓVIL FLOTANTE Y COMPACTO
    ========================================== */
 
+/* Esconder botón hamburguesa en pantallas grandes */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #00d2ff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
-  /* Contenedor principal del nav */
-  .navbar {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 10px 15px;
+  /* Mostrar botón hamburguesa */
+  .menu-toggle {
+    display: block !important;
   }
 
-  /* Lista de enlaces/categorías */
+  /* Menú flotante sobre la página (oculto por defecto) */
   .nav-links {
-    display: flex !important;
-    flex-direction: column !important;
+    display: none !important;
+    position: absolute !important;
+    top: 100%;
+    left: 0;
     width: 100% !important;
     background-color: #0d111a;
-    padding: 15px 0;
-    margin-top: 10px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 0;
+    border-bottom: 2px solid #00d2ff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+    z-index: 999;
+  }
+
+  /* Se muestra solo cuando se activa con JS */
+  .nav-links.active {
+    display: flex !important;
+    flex-direction: column !important;
   }
 
   .nav-item {
     width: 100%;
-    text-align: left;
   }
 
   .nav-links > a,
   .dropdown-toggle {
     width: 100%;
-    padding: 12px 15px !important;
-    justify-content: space-between;
+    padding: 10px 20px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    font-size: 0.85rem !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
-  /* Desplegables de submenús */
+  /* Ocultar submenús hasta tocar la categoría */
   .dropdown-menu {
+    display: none !important;
     position: static !important;
     width: 100% !important;
-    box-shadow: none !important;
     background-color: #070a11 !important;
-    padding-left: 20px !important;
+    padding-left: 15px !important;
+    box-shadow: none !important;
+  }
+
+  .nav-item.active .dropdown-menu,
+  .nav-item:hover .dropdown-menu {
+    display: block !important;
   }
 
   .dropdown-menu a {
-    padding: 10px 15px !important;
-    font-size: 0.85rem !important;
+    padding: 8px 20px !important;
+    font-size: 0.8rem !important;
   }
 }
