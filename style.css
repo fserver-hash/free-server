@@ -335,3 +335,31 @@ body {
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
 }
+/* ==========================================
+   UNIFICACIÓN Y ESTILO DE MENÚS
+   ========================================== */
+.nav-links > a,
+.dropdown-toggle {
+  font-family: var(--font-body);
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase; /* Fuerza a que todo se vea en mayúsculas parejas */
+  letter-spacing: 0.5px;
+  color: #cbd5e1 !important;
+  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-links > a:hover,
+.dropdown-toggle:hover {
+  color: var(--primary) !important;
+}
+
+/* Submenús desplegables */
+.dropdown-menu a {
+  text-transform: none; /* Mantiene las subcategorías con mayúsculas y minúsculas normales */
+  font-size: 0.85rem;
+  font-weight: 500;
+}
