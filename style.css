@@ -96,14 +96,28 @@ body {
   box-shadow: 0 4px 20px var(--primary-glow);
 }
 
+/* Botón secundario estilizado */
+.btn-secundario, 
 .btn-secondary {
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.2));
   background: rgba(255, 255, 255, 0.05);
-  color: var(--text-main);
-  padding: 14px 28px;
+  color: var(--text-main, #ffffff);
+  padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.btn-secundario:hover, 
+.btn-secondary:hover {
+  border-color: #00d2ff;
+  color: #00d2ff;
+  background: rgba(0, 210, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
 }
 
 .btn-whatsapp {
