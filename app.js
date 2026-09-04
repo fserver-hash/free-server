@@ -8,11 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
       return response.json();
     })
     .then(data => {
-      productosData = data;
-      console.log("Catálogo FREE SERVER cargado correctamente.");
-    })
-    .catch(error => console.error("Error en la carga del catálogo:", error));
-    
+    productosData = data;
+    console.log("Catálogo FREE SERVER cargado correctamente.");
+    cargarProductos('cctv', 'Cámaras y Seguridad CCTV');
+  })
+  .catch(error => console.error("Error en la carga del catálogo:", error));
+  
   // Configuración de eventos del modal y menú
   inicializarEventos();
 });
