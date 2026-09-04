@@ -3,150 +3,127 @@
     {
       "nombre": "MONITOR QUASAD 19.5INCH QM-L195",
       "descripcion": "Monitor LED de 19.5 pulgadas con resolución HD 1280×720.",
-      "precio": "$49.00",
-      "imagen": "https://via.placeholder.com/300x200?text=Quasad+19.5",
+      "precio": "$70.00",
+      "imagen": "img/productos/monitor-quasad-195.jpg",
       "sku": "MONQUAQM-L195BK",
-      "categoria": "Monitores",
       "especificaciones": [
         "Tamaño: 19.5 pulgadas",
         "Resolución: HD 1280×720",
         "Puertos: VGA, HDMI",
-        "Soporte VESA",
-        "Incluye cable HDMI"
+        "Soporte VESA: Sí"
+      ],
+      "incluye": [
+        "Cable HDMI",
+        "Cable de poder",
+        "Base de soporte"
       ],
       "garantia": "1 año",
-      "incluye": ["Cable HDMI", "Base de soporte", "Manual de usuario"],
-      "stock": 5
-    },
-    {
-      "nombre": "SMART DISPLAY AMAZON ECHO SHOW 5 3RD GEN",
-      "descripcion": "Pantalla inteligente con Alexa, sonido mejorado y diseño elegante.",
-      "precio": "$87.70",
-      "imagen": "https://via.placeholder.com/300x200?text=Echo+Show+5",
-      "sku": "MONAMZ080505848",
-      "categoria": "Monitores",
-      "especificaciones": [
-        "Pantalla: 5.5 pulgadas",
-        "Resolución: 960×480",
-        "Sonido: Bajos más profundos",
-        "Conectividad: Wi-Fi, Bluetooth",
-        "Año: 2023"
-      ],
-      "garantia": "6 meses",
-      "incluye": ["Cable de carga", "Adaptador de corriente"],
-      "stock": 8
+      "stock": "Disponible"
     },
     {
       "nombre": "MONITOR ASUS ZenScreen 15.6inch IPS MB169CK",
-      "descripcion": "Monitor portátil USB-C con soporte 360° y Full-HD.",
-      "precio": "$98.00",
-      "imagen": "https://via.placeholder.com/300x200?text=ZenScreen+15.6",
+      "descripcion": "Monitor portátil USB-C con soporte 360° y resolución Full-HD.",
+      "precio": "$140.00",
+      "imagen": "img/productos/asus-zenscreen-156.jpg",
       "sku": "MONASUMB169CK",
-      "categoria": "Monitores",
       "especificaciones": [
         "Tamaño: 15.6 pulgadas",
         "Resolución: Full-HD 1920×1080",
-        "Pantalla: IPS",
-        "Puertos: HDMI, 2x USB-C",
-        "Soporte 360°"
+        "Panel: IPS antirreflejo",
+        "Conectividad: USB-C, Mini HDMI"
+      ],
+      "incluye": [
+        "Cable USB-C",
+        "Funda protectora inteligente",
+        "Guía de inicio rápido"
       ],
       "garantia": "1 año",
-      "incluye": ["Cable USB-C", "Funda protectora", "Soporte plegable"],
-      "stock": 10
-    },
+      "stock": "Disponible"
+    }
+  ],
+  "laptops-nuevas": [
     {
-      "nombre": "MONITOR Dell Pro 20 E2026H",
-      "descripcion": "Monitor empresarial de 19.5 pulgadas con resolución 1600×900.",
-      "precio": "$105.00",
-      "imagen": "https://via.placeholder.com/300x200?text=Dell+Pro+20",
-      "sku": "MONDELED2026H",
-      "categoria": "Monitores",
+      "nombre": "Laptop Dell Vostro 3400",
+      "descripcion": "Equipo de alto rendimiento para trabajo empresarial y académico.",
+      "precio": "$860.00",
+      "imagen": "img/productos/dell-vostro-3400.jpg",
+      "sku": "LAP-DELL-V3400",
       "especificaciones": [
-        "Tamaño: 19.5 pulgadas",
-        "Resolución: 1600×900",
-        "Panel: TN",
-        "Puertos: HDMI, DP, VGA",
-        "Garantía: 3 años"
+        "Procesador: Intel Core i5 11ª Gen",
+        "Memoria RAM: 8GB DDR4",
+        "Almacenamiento: 256GB SSD NVMe",
+        "Pantalla: 14\" FHD (1920x1080)"
       ],
-      "garantia": "3 años",
-      "incluye": ["Cable HDMI", "Base de escritorio"],
-      "stock": 7
-    },
-    {
-      "nombre": "MONITOR GIGABYTE GS24F14",
-      "descripcion": "Monitor Gaming de 23.8 pulgadas FHD 144Hz para gamers exigentes.",
-      "precio": "$158.00",
-      "imagen": "https://via.placeholder.com/300x200?text=Gigabyte+GS24F14",
-      "sku": "MONIGBGS24F14",
-      "categoria": "Monitores",
-      "especificaciones": [
-        "Tamaño: 23.8 pulgadas",
-        "Resolución: FHD 1920×1080",
-        "Panel: IPS",
-        "Frecuencia: 144Hz",
-        "Puertos: HDMI, DP",
-        "Anti-reflejos"
-      ],
-      "garantia": "2 años",
-      "incluye": ["Cable HDMI", "Cable DisplayPort", "Base ajustable"],
-      "stock": 4
-    },
-    {
-      "nombre": "MONITOR GIGABYTE GS25F2",
-      "descripcion": "Monitor Gaming de 24.5 pulgadas con panel SS-IPS y 200Hz.",
-      "precio": "$180.00",
-      "imagen": "https://via.placeholder.com/300x200?text=Gigabyte+GS25F2",
-      "sku": "MONIGBGS25F2",
-      "categoria": "Monitores",
-      "especificaciones": [
-        "Tamaño: 24.5 pulgadas",
-        "Resolución: FHD 1920×1080",
-        "Panel: SS-IPS",
-        "Frecuencia: 200Hz",
-        "Puertos: 2x HDMI, 1x DP",
-        "Anti-reflejos"
-      ],
-      "garantia": "2 años",
-      "incluye": ["Cable HDMI", "Cable DisplayPort", "Base ajustable"],
-      "stock": 3
-    },
-    {
-      "nombre": "MONITOR ASUS VY279HGR",
-      "descripcion": "Monitor de 27 pulgadas FHD con 120Hz y tecnología Eye Care Plus.",
-      "precio": "$192.00",
-      "imagen": "https://via.placeholder.com/300x200?text=Asus+VY279HGR",
-      "sku": "MONASUVY279HGR",
-      "categoria": "Monitores",
-      "especificaciones": [
-        "Tamaño: 27 pulgadas",
-        "Resolución: FHD 1920×1080",
-        "Panel: IPS",
-        "Frecuencia: 120Hz",
-        "Tiempo respuesta: 1ms",
-        "Puertos: VGA, HDMI",
-        "Eye Care Plus"
-      ],
-      "garantia": "3 años",
-      "incluye": ["Cable HDMI", "Base de escritorio", "Manual"],
-      "stock": 6
-    },
-    {
-      "nombre": "MONITOR HP P22v G5",
-      "descripcion": "Monitor empresarial de 21.5 pulgadas FHD con diseño elegante.",
-      "precio": "$196.00",
-      "imagen": "https://via.placeholder.com/300x200?text=HP+P22v+G5",
-      "sku": "MONHPX64V81AA",
-      "categoria": "Monitores",
-      "especificaciones": [
-        "Tamaño: 21.5 pulgadas",
-        "Resolución: FHD 1920×1080",
-        "Puertos: HDMI, VGA",
-        "Diseño delgado",
-        "Color: Negro"
+      "incluye": [
+        "Cargador original",
+        "Licencia Windows preinstalada"
       ],
       "garantia": "1 año",
-      "incluye": ["Cable HDMI", "Base de escritorio"],
-      "stock": 9
+      "stock": "Disponible"
+    }
+  ],
+  "laptops-usadas": [
+    {
+      "nombre": "Lenovo ThinkPad T480",
+      "descripcion": "Laptop empresarial ultrarresistente reacondicionada en excelente estado (Grado A++).",
+      "precio": "$380.00",
+      "imagen": "img/productos/thinkpad-t480.jpg",
+      "sku": "LAP-USD-T480",
+      "especificaciones": [
+        "Procesador: Intel Core i5 8ª Gen",
+        "Memoria RAM: 16GB DDR4",
+        "Almacenamiento: 256GB SSD",
+        "Pantalla: 14\" HD / FHD"
+      ],
+      "incluye": [
+        "Cargador original Tipo-C",
+        "Batería funcional probada"
+      ],
+      "garantia": "6 meses",
+      "stock": "Pocas unidades"
+    }
+  ],
+  "discos-solidos": [
+    {
+      "nombre": "SSD Kingston NV2 1TB NVMe M.2",
+      "descripcion": "Unidad de estado sólido de alta velocidad para repotenciar PC o Laptop.",
+      "precio": "$200.00",
+      "imagen": "img/productos/ssd-kingston-1tb.jpg",
+      "sku": "ALM-SSD-1TB-NV2",
+      "especificaciones": [
+        "Capacidad: 1TB (1000GB)",
+        "Factor de forma: M.2 2280",
+        "Interfaz: PCIe 4.0 x4 NVMe",
+        "Velocidad de lectura: Hasta 3500 MB/s"
+      ],
+      "incluye": [
+        "Empaque sellado de fábrica"
+      ],
+      "garantia": "1 año",
+      "stock": "Disponible"
+    }
+  ],
+  "cctv": [
+    {
+      "nombre": "Cámara Wi-Fi Exterior EZVIZ H6C 3k",
+      "descripcion": "Cámara de seguridad inteligente con visión nocturna a color y detección de movimiento.",
+      "precio": "$45.00",
+      "imagen": "img/productos/ezviz-h3c.jpg",
+      "sku": "CCT-EZV-H6C",
+      "especificaciones": [
+        "Resolución: 3k ",
+        "Protección: IP68 (Resistente al agua/intemperie)",
+        "Visión Nocturna: Color / Infrarroja",
+        "Soporta Memoria de: Memoria / 512 Gb",
+        "Conectividad: Wi-Fi 2.4GHz / RJ45"
+      ],
+      "incluye": [
+        "Adaptador de corriente",
+        "Kit de tornillos y plantilla de montaje",
+        "Manual de usuario"
+      ],
+      "garantia": "1 año",
+      "stock": "Disponible"
     }
   ]
 }

@@ -494,3 +494,219 @@ body {
     display: block;
   }
 }
+/* ==========================================
+   TARJETAS Y GRID DE PRODUCTOS
+   ========================================== */
+.producto-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: 0 8px 25px rgba(0, 210, 255, 0.15);
+}
+
+.producto-imagen {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.producto-titulo {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.producto-descripcion {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+}
+
+.producto-precio {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.btn-ver-detalle {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.btn-ver-detalle:hover {
+  background: rgba(0, 210, 255, 0.2);
+  border-color: var(--primary);
+}
+
+.btn-comprar-wa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--whatsapp);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn-comprar-wa:hover {
+  background-color: #1ebc57;
+}
+
+/* ==========================================
+   ESTILOS DEL MODAL (VENTANA FLOTANTE)
+   ========================================== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(5px);
+  z-index: 2000;
+}
+
+.modal-producto {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  background: #0d1322;
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 30px rgba(0, 210, 255, 0.25);
+  border-radius: 16px;
+  z-index: 2001;
+  overflow-y: auto;
+  padding: 30px;
+}
+
+.modal-overlay.activo,
+.modal-producto.activo {
+  display: block;
+}
+
+.modal-cerrar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.modal-cerrar:hover {
+  color: var(--primary);
+}
+
+.modal-contenido {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.modal-col-img img {
+  width: 100%;
+  border-radius: 12px;
+  background: #05080e;
+  padding: 10px;
+}
+
+.modal-sku {
+  font-size: 0.8rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.modal-nombre {
+  font-size: 1.4rem;
+  margin: 5px 0 10px;
+  color: #fff;
+}
+
+.modal-descripcion {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.modal-seccion h4 {
+  color: var(--primary);
+  font-size: 0.9rem;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.modal-lista {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+
+.modal-lista li::before {
+  content: "▹ ";
+  color: var(--primary);
+}
+
+.modal-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 0.85rem;
+  margin: 15px 0;
+  color: var(--text-muted);
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+}
+
+.modal-precio {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--primary);
+}
+
+@media (max-width: 600px) {
+  .modal-contenido {
+    grid-template-columns: 1fr;
+  }
+}
