@@ -65,4 +65,52 @@
       "stock": "Disponible"
     }
   ]
-}
+},
+"routers": [],
+  "switches": [],
+  "repetidores": [],
+  "antenas-wifi": [],
+  "conectores": [],
+  "probadores": [],
+  "ponchadoras": [],
+  "fibra-optica": [
+    {
+      "nombre": "Rollos o Accesorios de Fibra Óptica",
+      "descripcion": "Fibra Drop 2 Hilos Soluciones de alta velocidad para infraestructura de red.",
+      "precio": "280",
+      "imagen": "",
+      "sku": "NET-FO-01",
+      "especificaciones": ["Alta velocidad", "Baja atenuación"],
+      "incluye": ["Bobina/Accesorio según modelo"],
+      "garantia": "1 año",
+      "stock": "Disponible"
+      ],
+  "racks": [],
+    },
+  
+  "celulares-android": [],
+  "iphones": [],
+  "tablets-android": [],
+  "ipads": [],
+  "cargadores-movil": [
+    {
+      "nombre": "Cargador Xmax Tipo C (45 Wats)",
+      "descripcion": "Cargador de pared Xmax ideal para dispositivos Android y accesorios.",
+      "precio": "$10.00",
+      "imagen": "img/productos/cargador-t-c45w.jpg",
+      "sku": "MOV-CARG-TC-645W",
+      "link_whatsapp": "https://wa.me/p/26941516175436228/593983278876",
+      "especificaciones": [
+        "Conector: Tipo-C (45 W)",
+        "Voltaje de entrada: 100-240V",
+        "Salida: 5V / 5A"
+      ],
+      "incluye": [
+        "Adaptador de pared",
+        "Cable Tipo-C (1m)"
+      ],
+      "garantia": "1 año",
+      "stock": "Disponible"
+    }
+  ],
+  "cables-movil": []
