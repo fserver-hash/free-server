@@ -73,7 +73,30 @@
   "switch-poe": [],
   "fuentes": [],
   "routers": [],
-  "switches": [],
+  "switches": [
+    "switch-poe": [
+    {
+      "nombre": "Switch PoE PPA 4 Puertos",
+      "descripcion": "Switch Gigabyte con 8 puertos PoE ideal para cámaras IP.",
+      "precio": "$34.00",
+      "imagen": "img/productos/switch-poe-ppa-4p.jpg",
+      "sku": "NET-SW-POE-PPA-4",
+      "link_whatsapp": "https://wa.me/p/29268258876098185/232052855152742",
+      "especificaciones": [
+        "Puertos: 4 PoE + 2 Uplink",
+        "Potencia total: 96W",
+        "Modo Extend: Hasta 250m"
+      ],
+      "incluye": [
+        "Switch PoE",
+        "Cable de poder",
+        "Manual de usuario"
+      ],
+      "garantia": "1 año",
+      "stock": "Disponible"
+    }
+  ]
+  ],
   "repetidores": [],
   "antenas-wifi": [],
   "conectores": [],
