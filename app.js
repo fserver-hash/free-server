@@ -148,13 +148,13 @@ function inicializarEventos() {
     });
   }
 }
-// CONTROL DEL MENÚ MÓVIL
+// CONTROL DEL MENÚ MÓVIL CON CIERRE AUTOMÁTICO
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.querySelector('.nav-links');
   const dropdowns = document.querySelectorAll('.nav-item.dropdown');
 
-  // Abrir / cerrar menú principal al presionar la hamburguesa
+  // 1. Abrir / cerrar menú principal al presionar la hamburguesa
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Desplegar submenús al tocar categorías en móviles
+  // 2. Desplegar submenús al tocar categorías que tienen opciones
   dropdowns.forEach(dropdown => {
     const toggleBtn = dropdown.querySelector('.dropdown-toggle');
     if (toggleBtn) {
@@ -175,11 +175,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Cerrar menú al hacer clic fuera de él
+  // 3. CERRAR EL MENÚ AL HACER CLIC EN CUALQUIER PRODUCTO O CATEGORÍA
+  const enlacesMenu = document.querySelectorAll('.nav-links a:not(.dropdown-toggle)');
+  enlacesMenu.forEach(enlace => {
+    enlace.addEventListener('click', () => {
+      if (window.innerWidth <= 768 && navLinks) {
+        // Cierra el menú desplegable principal
+        navLinks.classList.remove('active');
+        
+        // Cierra también los submenús que hayan quedado abiertos
+        dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+      }
+    });
+  });
+
+  // 4. Cerrar menú si el usuario toca fuera de la barra de navegación
   document.addEventListener('click', (e) => {
     if (navLinks && navLinks.classList.contains('active')) {
       if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
         navLinks.classList.remove('active');
+        dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
       }
     }
   });
