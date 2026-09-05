@@ -148,3 +148,39 @@ function inicializarEventos() {
     });
   }
 }
+// CONTROL DEL MENÚ MÓVIL
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const dropdowns = document.querySelectorAll('.nav-item.dropdown');
+
+  // Abrir / cerrar menú principal al presionar la hamburguesa
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navLinks.classList.toggle('active');
+    });
+  }
+
+  // Desplegar submenús al tocar categorías en móviles
+  dropdowns.forEach(dropdown => {
+    const toggleBtn = dropdown.querySelector('.dropdown-toggle');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          dropdown.classList.toggle('active');
+        }
+      });
+    }
+  });
+
+  // Cerrar menú al hacer clic fuera de él
+  document.addEventListener('click', (e) => {
+    if (navLinks && navLinks.classList.contains('active')) {
+      if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+        navLinks.classList.remove('active');
+      }
+    }
+  });
+});

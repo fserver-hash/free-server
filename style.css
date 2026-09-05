@@ -475,20 +475,30 @@ body {
    MENÚ MÓVIL FLOTANTE Y COMPACTO
    ========================================== */
 
-/* Esconder botón hamburguesa en pantallas grandes */
-.menu-toggle {
+/* Ocultar botón hamburguesa en pantallas grandes */
+.menu-hamburguesa {
   display: none;
   background: transparent;
   border: none;
-  color: #00d2ff;
-  font-size: 1.5rem;
   cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+}
+
+.menu-hamburguesa span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #00d2ff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
-  /* Mostrar botón hamburguesa */
-  .menu-toggle {
-    display: block !important;
+  /* Mostrar botón hamburguesa en teléfonos */
+  .menu-hamburguesa {
+    display: flex !important;
   }
 
   /* Menú flotante sobre la página (oculto por defecto) */
@@ -499,13 +509,13 @@ body {
     left: 0;
     width: 100% !important;
     background-color: #0d111a;
-    padding: 10px 0;
+    padding: 15px 0;
     border-bottom: 2px solid #00d2ff;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
     z-index: 999;
   }
 
-  /* Se muestra solo cuando se activa con JS */
+  /* Se muestra solo al activar la hamburguesa */
   .nav-links.active {
     display: flex !important;
     flex-direction: column !important;
@@ -518,10 +528,10 @@ body {
   .nav-links > a,
   .dropdown-toggle {
     width: 100%;
-    padding: 10px 20px !important;
+    padding: 12px 20px !important;
     display: flex !important;
     justify-content: space-between !important;
-    font-size: 0.85rem !important;
+    font-size: 0.9rem !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
@@ -535,13 +545,12 @@ body {
     box-shadow: none !important;
   }
 
-  .nav-item.active .dropdown-menu,
-  .nav-item:hover .dropdown-menu {
+  .nav-item.active .dropdown-menu {
     display: block !important;
   }
 
   .dropdown-menu a {
-    padding: 8px 20px !important;
-    font-size: 0.8rem !important;
+    padding: 10px 20px !important;
+    font-size: 0.85rem !important;
   }
 }
