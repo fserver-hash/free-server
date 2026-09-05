@@ -41,6 +41,25 @@
       "garantia": "1 año",
       "stock": "Disponible"
     }
+    {
+      "nombre": "Laptop Lenovo idea Pad i3 ",
+      "descripcion": "Equipo perfecto para tareas académicas.",
+      "precio": "$475.00",
+      "imagen": "img/productos/lenovo-i3.jpg",
+      "sku": "LAP-LENOVO-IDEAPAD-i3",
+      "especificaciones": [
+        "Procesador: Intel Core i3 N305",
+        "Memoria RAM: 8GB DDR5",
+        "Almacenamiento: 128GB SSD NVMe",
+        "Pantalla: 15.5\" FHD (1920x1080)"
+      ],
+      "incluye": [
+        "Cargador original",
+        "Sistema Windows mas Programas"
+      ],
+      "garantia": "1 año",
+      "stock": "Disponible"
+    }
   ],
   "cctv": [
     {
