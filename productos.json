@@ -70,11 +70,7 @@
   "dvr": [],
   "camaras-ip": [],
   "nvr": [],
-  "switch-poe": [],
-  "fuentes": [],
-  "routers": [],
-  "switches": [
-    "switch-poe": [
+  "switch-poe": [
     {
       "nombre": "Switch PoE PPA 4 Puertos",
       "descripcion": "Switch Gigabyte con 8 puertos PoE ideal para cámaras IP.",
@@ -95,8 +91,10 @@
       "garantia": "1 año",
       "stock": "Disponible"
     }
-  ]
   ],
+  "fuentes": [],
+  "routers": [],
+  "switches": [],
   "repetidores": [],
   "antenas-wifi": [],
   "conectores": [],
@@ -109,8 +107,13 @@
       "precio": "$280.00",
       "imagen": "img/productos/fibra-optica.jpg",
       "sku": "NET-FO-01",
-      "especificaciones": ["Alta velocidad", "Baja atenuación"],
-      "incluye": ["Bobina/Accesorio según modelo"],
+      "especificaciones": [
+        "Alta velocidad",
+        "Baja atenuación"
+      ],
+      "incluye": [
+        "Bobina/Accesorio según modelo"
+      ],
       "garantia": "1 año",
       "stock": "Disponible"
     }
