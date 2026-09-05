@@ -36,7 +36,7 @@
       ],
       "incluye": [
         "Cargador original",
-        "Licencia Windows preinstalada"
+        "Sistema Windows + Programas"
       ],
       "garantia": "1 año",
       "stock": "Disponible"
@@ -55,7 +55,26 @@
       ],
       "incluye": [
         "Cargador original",
-        "Sistema Windows mas Programas"
+        "Sistema Windows + Programas"
+      ],
+      "garantia": "1 año",
+      "stock": "Disponible"
+    },
+    {
+      "nombre": "Laptop Lenovo idea Pad Ryzen 5 ",
+      "descripcion": "Equipo perfecto para tareas académicas y Semi-profecionales.",
+      "precio": "$600.00",
+      "imagen": "img/productos/lenovo-r5.jpg",
+      "sku": "LAP-LENOVO-IDEAPAD-RYZEN 5",
+      "especificaciones": [
+        "Procesador: AMD Ryzen 5",
+        "Memoria RAM: 8GB DDR5",
+        "Almacenamiento: 256GB SSD NVMe",
+        "Pantalla: 15.5\" FHD (1920x1080)"
+      ],
+      "incluye": [
+        "Cargador original",
+        "Sistema Windows + Programas"
       ],
       "garantia": "1 año",
       "stock": "Disponible"
