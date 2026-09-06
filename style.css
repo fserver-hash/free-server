@@ -554,3 +554,34 @@ body {
     font-size: 0.85rem !important;
   }
 }
+/* ==========================================
+   CORRECCIÓN DE TAMAÑO Y OVERFLOW DEL MODAL
+   ========================================== */
+
+/* Limita el alto de la ventana modal y agrega scroll si el contenido es largo */
+.modal-producto {
+  max-height: 85vh !important;
+  overflow-y: auto !important;
+  box-shadow: 0 0 25px rgba(0, 210, 255, 0.25);
+}
+
+/* Control estricto de las imágenes dentro del modal para evitar sobreexposición */
+.modal-contenido img {
+  width: 100% !important;
+  max-height: 300px !important;
+  object-fit: contain !important;
+  border-radius: 8px;
+}
+
+/* Adaptación para pantallas de teléfonos celulares */
+@media (max-width: 768px) {
+  .modal-producto {
+    width: 95% !important;
+    padding: 20px 15px !important;
+    max-height: 90vh !important;
+  }
+
+  .modal-contenido img {
+    max-height: 200px !important;
+  }
+}
